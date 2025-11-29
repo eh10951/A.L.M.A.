@@ -139,21 +139,35 @@ body {
     color: #2ecc71; 
 }
 /* ---------------------------------
-   7. RESPONSIVE DESIGN (MÓVILES)
+   7. RESPONSIVE DESIGN (MÃ“VILES) - MEJORADO
    --------------------------------- */
 @media (max-width: 768px) {
     body {
-        background-attachment: scroll; /* Mejor rendimiento en móviles */
-        padding: 20px;
-        align-items: center; /* Centrar verticalmente */
+        background-attachment: scroll;
+        padding: 15px;
+        align-items: center;
+        min-height: 100vh;
     }
 
     .login-card {
-        margin-left: 0; /* Quitar el margen izquierdo fijo */
-        margin: 0 auto; /* Centrar horizontalmente */
+        margin-left: 0;
+        margin: 0 auto;
         width: 100%;
-        max-width: 320px; /* Ancho máximo para que no se estire demasiado */
-        background-color: rgba(255, 255, 255, 0.85); /* Más opaco para mejor lectura */
+        max-width: 350px;
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 25px 20px;
     }
+    
+    .title { font-size: 1.5em; }
+    .subtitle { font-size: 0.9em; margin-bottom: 20px; }
+}
+
+@media (max-width: 480px) {
+    .login-card {
+        padding: 20px 15px;
+        box-shadow: none;
+        border: 1px solid #eee;
+    }
+    .title { font-size: 1.3em; }
 }
 

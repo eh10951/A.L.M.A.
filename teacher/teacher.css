@@ -1060,3 +1060,24 @@ body {
     }
 }
 
+
+/* --- AJUSTES FINALES PARA MÓVILES (Sobreescribe reglas anteriores) --- */
+@media (max-width: 768px) {
+    .main-header-content { padding-bottom: 15px; }
+    .header-top-bar { gap: 10px; }
+    .logo-wrapper { margin-bottom: 5px; }
+    .horizontal-nav { gap: 8px; }
+    .nav-item { border-radius: 8px; }
+    .table-container { margin-bottom: 15px; }
+    th, td { padding: 10px; font-size: 0.9em; }
+    .classes-grid { gap: 15px; }
+    .messaging-container { height: calc(100vh - 180px); flex-direction: column; }
+    .conversations-list-panel { width: 100%; height: 150px; border-right: none; border-bottom: 1px solid var(--border-main); }
+    .chat-panel { height: auto; flex-grow: 1; }
+}
+
+@media (max-width: 480px) {
+    .messaging-container { height: calc(100vh - 140px); }
+    .conversations-list-panel { height: 120px; }
+}
+
