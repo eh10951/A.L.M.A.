@@ -1361,3 +1361,84 @@ body {
     color: var(--text-primary);
 }
 
+
+/* ================================================= */
+/* RESPONSIVE DESIGN (MÓVILES Y TABLETS) */
+/* ================================================= */
+
+@media (max-width: 768px) {
+    
+    /* 1. Ajustes Generales */
+    .page-container {
+        padding: 10px;
+    }
+
+    /* 2. Header y Navegación */
+    .main-header-content {
+        min-height: auto;
+        padding-bottom: 10px;
+    }
+
+    .header-top-bar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .logo-wrapper {
+        margin-left: 0;
+    }
+
+    .system-title-container {
+        margin-bottom: 10px;
+    }
+
+    .horizontal-nav {
+        flex-direction: column;
+        gap: 5px;
+        padding: 10px;
+    }
+
+    .nav-item {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+    }
+
+    /* 3. Tablas Responsivas */
+    .data-table-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        border: 1px solid var(--border-subtle);
+    }
+
+    .data-table {
+        min-width: 600px; /* Asegura que la tabla no se comprima demasiado */
+    }
+
+    /* 4. Tarjetas y Grids */
+    .info-grid {
+        grid-template-columns: 1fr; /* Una sola columna */
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    /* 5. Barra de Acción */
+    .action-bar {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        position: static; /* Ya no sticky en móviles para ganar espacio */
+    }
+
+    .form-action-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+

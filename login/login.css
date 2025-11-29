@@ -138,3 +138,22 @@ body {
 .success {
     color: #2ecc71; 
 }
+/* ---------------------------------
+   7. RESPONSIVE DESIGN (MÓVILES)
+   --------------------------------- */
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll; /* Mejor rendimiento en móviles */
+        padding: 20px;
+        align-items: center; /* Centrar verticalmente */
+    }
+
+    .login-card {
+        margin-left: 0; /* Quitar el margen izquierdo fijo */
+        margin: 0 auto; /* Centrar horizontalmente */
+        width: 100%;
+        max-width: 320px; /* Ancho máximo para que no se estire demasiado */
+        background-color: rgba(255, 255, 255, 0.85); /* Más opaco para mejor lectura */
+    }
+}
+

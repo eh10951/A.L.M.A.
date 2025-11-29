@@ -993,3 +993,70 @@ body {
         height: 500px; 
     }
 }
+/* ================================================= */
+/* RESPONSIVE DESIGN (MÓVILES Y TABLETS) */
+/* ================================================= */
+
+@media (max-width: 768px) {
+    
+    /* 1. Ajustes Generales */
+    .page-container {
+        padding: 10px;
+    }
+
+    /* 2. Header y Navegación */
+    .main-header-content {
+        min-height: auto;
+        padding-bottom: 10px;
+    }
+
+    .header-top-bar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .logo-wrapper {
+        margin-left: 0;
+    }
+
+    .horizontal-nav {
+        flex-direction: column;
+        gap: 5px;
+        padding: 10px;
+    }
+
+    .nav-item {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+    }
+
+    /* 3. Tablas Responsivas */
+    .table-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin-bottom: 15px;
+    }
+
+    table {
+        min-width: 600px;
+    }
+
+    /* 4. Tarjetas de Clases */
+    .classes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* 5. Mensajería (Ajustes adicionales a los existentes) */
+    .messaging-container {
+        height: calc(100vh - 200px); /* Ajustar altura en móviles */
+    }
+    
+    .chat-panel {
+        height: auto;
+        flex-grow: 1;
+    }
+}
+
