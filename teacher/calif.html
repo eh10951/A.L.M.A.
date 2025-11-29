@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A.L.M.A - Captura de Calificaciones</title>
+    <link rel="stylesheet" href="teacher.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div class="page-container">
+    
+        <header class="main-header-content">
+            <div class="header-top-bar">
+                
+                <div class="logo-wrapper">
+                    <img src="logounrc.jpg" alt="Logo de la Universidad" class="logo-img">
+                </div>
+                
+                <div class="system-title-container">
+                    <h1 class="system-title">A.L.M.A.</h1>
+                    <span class="system-subtitle-acronym">Administración Logística y Modular Académica</span>
+                </div>
+
+                <div class="profile-dropdown">
+                    <button class="profile-menu-toggle" id="profileToggle">
+                        <i class="fas fa-user-circle profile-icon-fa"></i>
+                        <span>Profesor [Nombre]</span>
+                    </button>
+                    
+                    <div class="dropdown-content" id="profileDropdown">
+                        <a href="configuracion.html">Configuración</a>
+                        <a href="#">Ayuda</a>
+                        <a href="../login/login.html" class="logout">Cerrar Sesión</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="theme-toggle-container-bottom">
+                   <button id="themeToggle" class="theme-toggle-button" aria-label="Cambiar Tema">
+                     <i class="fas fa-sun"></i> 
+                </button>
+            </div>
+
+            <nav class="horizontal-nav">
+                <a href="myclass.html" class="nav-item" data-page="clases">Mis Clases</a>
+                <a href="calif.html" class="nav-item active" data-page="calificaciones">Captura de Calificaciones</a>
+                <a href="horario.html" class="nav-item" data-page="horarios">Horarios</a>
+                <a href="mensajes.html" class="nav-item" data-page="mensajes">Mensajes</a>
+            </nav>
+        </header>
+
+        <main class="main-content-area">
+            
+            <h2 class="section-header-fancy">
+                <i class="fas fa-clipboard-list header-icon"></i> 
+                Captura de Calificaciones
+            </h2>
+            <p class="subtitle-text">
+                Evaluación Total (ET - 70%) y Proyecto Prototípico (PP - 30%).
+            </p>
+
+            <div class="group-actions-header">
+                
+                <div class="class-selector-wrapper">
+                    <label for="groupSelector" class="current-class-title">Clase Actual:</label>
+                    <select id="groupSelector" class="group-selector">
+                        <option value="GANA">Geometría Analítica (GPO-103)</option>
+                        <option value="ALIN">Álgebra Lineal (GPO-201)</option>
+                        <option value="CINT">Cálculo Integral (GPO-301)</option>
+                    </select>
+                </div>
+                
+                <button class="save-grades-btn" onclick="saveGrades()">
+                    <i class="fas fa-save"></i> Guardar Calificaciones
+                </button>
+            </div>
+
+
+            <div class="grades-table-container">
+                <table class="grades-table">
+                    <colgroup>
+                        <col class="col-index">
+                        <col class="col-name">
+                        <col class="col-auto">
+                        <col class="col-auto">
+                        <col class="col-auto">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nombre del Alumno</th>
+                            <th>Evaluación Total (ET - 70%)</th>
+                            <th>Proyecto Prototípico (PP - 30%)</th>
+                            <th>Calificación Final (CF)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="gradesTableBody">
+                        </tbody>
+                </table>
+            </div>
+
+        </main>
+
+        <footer class="main-footer">
+            <p>&copy; 2025 Universidad Nacional Rosario Castellanos. Todos los derechos reservados.</p>
+        </footer>
+    </div> 
+
+    <script src="teacher.js"></script>
+
+</body>
+</html>

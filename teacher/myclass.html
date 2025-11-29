@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A.L.M.A - Mis Clases</title>
+    <link rel="stylesheet" href="teacher.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div class="page-container">
+    
+        <header class="main-header-content">
+            <div class="header-top-bar">
+                
+                <div class="logo-wrapper">
+                    <img src="logounrc.jpg" alt="Logo de la Universidad" class="logo-img">
+                </div>
+                
+                <!-- CLAVE: El contenedor del título se queda en el medio para centrarlo -->
+                <div class="system-title-container">
+                    <h1 class="system-title">A.L.M.A.</h1>
+                    <span class="system-subtitle-acronym">Administración Logística y Modular Académica</span>
+                </div>
+                <!-- FIN CLAVE -->
+
+                <div class="profile-dropdown">
+                    <button class="profile-menu-toggle" id="profileToggle">
+                        <i class="fas fa-user-circle profile-icon-fa"></i>
+                        <span>Profesor [Nombre]</span>
+                    </button>
+                    
+                    <div class="dropdown-content" id="profileDropdown">
+                        <a href="configuracion.html">Configuración</a>
+                        <a href="#">Ayuda</a>
+                        <a href="../login/login.html" class="logout">Cerrar Sesión</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CLAVE: Nuevo contenedor para posicionar el botón en la esquina inferior derecha del header -->
+            <div class="theme-toggle-container-bottom">
+                 <button id="themeToggle" class="theme-toggle-button" aria-label="Cambiar Tema">
+                    <i class="fas fa-sun"></i> <!-- Icono inicial: Sol (modo claro) -->
+                </button>
+            </div>
+            <!-- FIN CLAVE -->
+
+            <nav class="horizontal-nav">
+                <a href="myclass.html" class="nav-item active" data-page="clases">Mis Clases</a>
+                <a href="calif.html" class="nav-item" data-page="calificaciones">Captura de Calificaciones</a>
+                <a href="horario.html" class="nav-item" data-page="horarios">Horarios</a>
+                <a href="mensajes.html" class="nav-item" data-page="mensajes">Mensajes</a>
+            </nav>
+        </header>
+
+        <!-- RESTO DEL CONTENIDO PRINCIPAL -->
+        <main class="main-content-area">
+            
+            <h2 class="section-header-fancy">
+                <i class="fas fa-book-reader header-icon"></i> 
+                Panel de Grupos Activos
+            </h2>
+            <p class="subtitle-text">Seleccione una clase para acceder a los detalles y captura de notas.</p>
+
+            <div class="class-cards-grid"> 
+                
+                <div class="class-card">
+                    <h3 class="card-title">GEOMETRÍA ANALÍTICA</h3>
+                    <p class="card-detail"><i class="fas fa-microchip detail-icon"></i>Unidad Académica: GAM</p>
+                    <p class="card-detail"><i class="fas fa-graduation-cap detail-icon"></i>Licenciatura: Ciencias de Datos para Negocios</p>
+                    
+                    <div class="card-chips">
+                        <span class="chip chip-group"><i class="fas fa-users"></i> GPO-103</span>
+                        <span class="chip chip-turn-vesp"><i class="fas fa-moon"></i> Vespertino</span>
+                    </div>
+
+                    <div class="card-buttons-container">
+                        <button class="card-button primary-btn" onclick="goToGrades('GANA')">
+                            <i class="fas fa-pencil-alt"></i> Calificar
+                        </button>
+                        <button class="card-button secondary-btn" onclick="takeAttendance('GANA')">
+                            <i class="fas fa-clipboard-list"></i> Lista
+                        </button>
+                    </div>
+                </div>
+
+                <div class="class-card">
+                    <h3 class="card-title">ÁLGEBRA LINEAL</h3>
+                    <p class="card-detail"><i class="fas fa-chart-line detail-icon"></i>Unidad Académica: GAM</p>
+                    <p class="card-detail"><i class="fas fa-graduation-cap detail-icon"></i>Licenciatura: Ciencias de Datos para Negocios</p>
+                    
+                    <div class="card-chips">
+                        <span class="chip chip-group"><i class="fas fa-users"></i> GPO-201</span>
+                        <span class="chip chip-turn-interm"><i class="fas fa-cloud-sun"></i> Intermedio</span>
+                    </div>
+
+                    <div class="card-buttons-container">
+                        <button class="card-button primary-btn" onclick="goToGrades('ALIN')">
+                            <i class="fas fa-pencil-alt"></i> Calificar
+                        </button>
+                        <button class="card-button secondary-btn" onclick="takeAttendance('ALIN')">
+                            <i class="fas fa-clipboard-list"></i> Lista
+                        </button>
+                    </div>
+                </div>
+
+                <div class="class-card">
+                    <h3 class="card-title">CÁLCULO INTEGRAL</h3>
+                    <p class="card-detail"><i class="fas fa-brain detail-icon"></i>Unidad Académica: GAM</p>
+                    <p class="card-detail"><i class="fas fa-graduation-cap detail-icon"></i>Licenciatura: Ciencias de Datos para Negocios</p>
+                    
+                    <div class="card-chips">
+                        <span class="chip chip-group"><i class="fas fa-users"></i> GPO-301</span>
+                        <span class="chip chip-turn-matu"><i class="fas fa-sun"></i> Matutino</span>
+                    </div>
+
+                    <div class="card-buttons-container">
+                        <button class="card-button primary-btn" onclick="goToGrades('CINT')">
+                            <i class="fas fa-pencil-alt"></i> Calificar
+                        </button>
+                        <button class="card-button secondary-btn" onclick="takeAttendance('CINT')">
+                            <i class="fas fa-clipboard-list"></i> Lista
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="main-footer">
+            <p>&copy; 2025 Universidad Nacional Rosario Castellanos. Todos los derechos reservados.</p>
+        </footer>
+    </div> 
+
+    <script src="teacher.js"></script>
+
+</body>
+</html>

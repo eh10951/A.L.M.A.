@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trámites y Documentos - Alumnos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="student.css">
+</head>
+<body>
+
+    <div class="page-container">
+
+        <header class="main-header-content">
+            <div class="header-top-bar">
+                <div class="logo-wrapper">
+                    <img src="logounrc.jpg" alt="Logo UNRC" class="logo-img">
+                </div>
+                <div class="system-title-container">
+                    <h1 class="system-title">A.L.M.A.</h1>
+                    <p class="system-subtitle-acronym">Administración Logística y Modular Academica </p>
+                </div>
+                <div class="profile-dropdown">
+                    <button class="profile-menu-toggle" id="profileToggle">
+                        <i class="fas fa-user-circle profile-icon-fa"></i>
+                        <span>Ana C. Pérez López</span>
+                        <i class="fas fa-caret-down" style="margin-left: 8px;"></i>
+                    </button>
+                    <div class="dropdown-content" id="profileDropdown">
+                        <a href="#"><i class="fas fa-id-badge"></i> Mi Perfil</a>
+                        <a href="#"><i class="fas fa-cog"></i> Configuración</a>
+                        <a href="../login/login.html" class="logout"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="horizontal-nav">
+    <a href="kardex.html" class="nav-item">Kardex Académico</a>
+    <a href="horario.html" class="nav-item">Horarios</a>
+    <a href="docs.html" class="nav-item active">Trámites y Documentos</a>
+    <a href="inscrip.html" class="nav-item">Inscripciones</a>
+    <a href="medic.html" class="nav-item">Datos Médicos</a>
+</nav>
+
+            <div class="theme-toggle-container-bottom">
+                <button class="theme-toggle-button" id="themeToggle" aria-label="Cambiar a Tema Oscuro">
+                    <i class="fas fa-sun"></i> 
+                </button>
+            </div>
+        </header>
+
+        <div class="main-content-area">
+    
+            <div class="content-header">
+                <h2>📋 Trámites y Documentos</h2>
+                <p class="subtitle">Gestión de trámites académicos y acceso a documentos oficiales.</p>
+            </div>
+
+            <div class="card tramites-section">
+                <h3><i class="fas fa-file-alt"></i> Trámites Académicos</h3>
+                
+                <div class="tramites-grid">
+                    <div class="tramite-card">
+                        <div class="tramite-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="tramite-content">
+                            <h4>Certificado de Calificaciones</h4>
+                            <p class="tramite-description">Solicita un certificado oficial con tus calificaciones del semestre.</p>
+                            <button class="btn-tramite">
+                                <i class="fas fa-plus"></i> Solicitar
+                            </button>
+                        </div>
+                        <span class="tramite-status disponible">Disponible</span>
+                    </div>
+
+                    <div class="tramite-card">
+                        <div class="tramite-icon">
+                            <i class="fas fa-id-card"></i>
+                        </div>
+                        <div class="tramite-content">
+                            <h4>Reposición de Credencial</h4>
+                            <p class="tramite-description">Trámite para obtener una nueva credencial estudiantil.</p>
+                            <button class="btn-tramite">
+                                <i class="fas fa-plus"></i> Solicitar
+                            </button>
+                        </div>
+                        <span class="tramite-status disponible">Disponible</span>
+                    </div>
+
+                    <div class="tramite-card">
+                        <div class="tramite-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="tramite-content">
+                            <h4>Solicitud de Titulación</h4>
+                            <p class="tramite-description">Inicia el trámite de titulación y obtención del grado.</p>
+                            <button class="btn-tramite disabled">
+                                <i class="fas fa-lock"></i> Próximamente
+                            </button>
+                        </div>
+                        <span class="tramite-status proximamente">Próximamente</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card documentos-section">
+                <h3><i class="fas fa-file-pdf"></i> Documentos Disponibles</h3>
+                <div class="documento-container">
+                    
+                    <div class="documento-card" id="openComprobanteModal">
+                        <div class="documento-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="documento-content">
+                            <h4>Comprobante de Estudios</h4>
+                            <p class="documento-description">Visualiza y descarga tu documento oficial de estatus académico.</p>
+                            <span class="documento-tag completo">Actualizado 2025</span>
+                        </div>
+                        <button class="btn-small"><i class="fas fa-eye"></i> Ver PDF</button>
+                    </div>
+
+                    </div>
+            </div>
+
+            <div id="pdfModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-button" id="closePdfModal">&times;</span>
+                    <div class="modal-header">
+                        <h3>Comprobante de Estudios - comprobante_wereber.pdf</h3>
+                    </div>
+                    <div class="pdf-viewer-embed">
+                        <iframe id="pdfFrame" src="comprobante_wereber.pdf" frameborder="0"></iframe>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="comprobante_wereber.pdf" download="comprobante_wereber.pdf" class="btn-primary btn-modal-download">
+                            <i class="fas fa-download"></i> Descargar Comprobante
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card historial-tramites">
+                <h3><i class="fas fa-history"></i> Historial de Trámites</h3>
+                <div class="tramites-table-container">
+                    <table class="tramites-table">
+                        <thead>
+                            <tr>
+                                <th>Trámite</th>
+                                <th>Fecha de Solicitud</th>
+                                <th>Estatus</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><i class="fas fa-file-invoice"></i> Certificado Parcial</td>
+                                <td>08 Nov 2024</td>
+                                <td><span class="status-badge completed">Completado</span></td>
+                                <td><button class="btn-small"><i class="fas fa-download"></i> Descargar</button></td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-id-card"></i> Credencial de Estudiante</td>
+                                <td>12 Nov 2024</td>
+                                <td><span class="status-badge processing">En Proceso</span></td>
+                                <td><button class="btn-small disabled"><i class="fas fa-clock"></i> Pendiente</button></td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-book"></i> Cambio de Grupo</td>
+                                <td>08 Nov 2024</td>
+                                <td><span class="status-badge completed">Completado</span></td>
+                                <td><button class="btn-small"><i class="fas fa-check"></i> Ver Detalles</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+        </div>
+        <footer class="main-footer">
+            &copy; 2025 Sistema de Gestión Académica - Universidad Nacional de Río Cuarto.
+        </footer>
+    </div>
+    
+    <script src="student.js"></script>
+
+</body>
+</html>

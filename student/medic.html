@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos Médicos - Alumnos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="student.css">
+</head>
+<body>
+
+    <div class="page-container">
+
+        <header class="main-header-content">
+            <div class="header-top-bar">
+                <div class="logo-wrapper">
+                    <img src="logounrc.jpg" alt="Logo UNRC" class="logo-img">
+                </div>
+                <div class="system-title-container">
+                    <h1 class="system-title">A.L.M.A.</h1>
+                    <p class="system-subtitle-acronym">Administración Logística y Modular Académica </p>
+                </div>
+                <div class="profile-dropdown">
+                    <button class="profile-menu-toggle" id="profileToggle">
+                        <i class="fas fa-user-circle profile-icon-fa"></i>
+                        <span>Ana C. Pérez López</span>
+                        <i class="fas fa-caret-down" style="margin-left: 8px;"></i>
+                    </button>
+                    <div class="dropdown-content" id="profileDropdown">
+                        <a href="#"><i class="fas fa-id-badge"></i> Mi Perfil</a>
+                        <a href="#"><i class="fas fa-cog"></i> Configuración</a>
+                        <a href="../login/login.html" class="logout"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="horizontal-nav">
+                <a href="kardex.html" class="nav-item">Kardex Académico</a>
+                <a href="horario.html" class="nav-item">Horarios</a>
+                <a href="docs.html" class="nav-item">Trámites y Documentos</a>
+                <a href="inscrip.html" class="nav-item">Inscripciones</a>
+                <a href="medic.html" class="nav-item active">Datos Médicos</a>
+            </nav>
+
+            <div class="theme-toggle-container-bottom">
+                <button class="theme-toggle-button" id="themeToggle" aria-label="Cambiar a Tema Oscuro">
+                    <i class="fas fa-sun"></i> 
+                </button>
+            </div>
+        </header>
+
+        <div class="main-content-area">
+    
+            <div class="content-header">
+                <h2> Ficha Médica del Estudiante</h2>
+                <p class="subtitle">Información de salud importante para emergencias y servicios médicos universitarios.</p>
+            </div>
+
+            <div class="alert-box alert-warning">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div>
+                    <strong>Importante:</strong> Mantén esta información actualizada. En caso de emergencia, estos datos serán utilizados por el servicio médico.
+                </div>
+            </div>
+
+            <div class="info-grid">
+                
+                <div class="info-card">
+                    <h3><i class="fas fa-user-md"></i> Información General</h3>
+                    <div class="info-row">
+                        <span class="info-label">Tipo de Sangre:</span>
+                        <span class="info-value highlight"><i class="fas fa-tint"></i> O Positivo (O+)</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Estatura:</span>
+                        <span class="info-value">1.65 m</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Peso:</span>
+                        <span class="info-value">62 kg</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">NSS (IMSS):</span>
+                        <span class="info-value">1234-56-7890</span>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3><i class="fas fa-notes-medical"></i> Alergias y Padecimientos</h3>
+                    <div class="info-row">
+                        <span class="info-label">Alergias:</span>
+                        <span class="info-value highlight" style="color: #d35400; background-color: rgba(211, 84, 0, 0.1);"><i class="fas fa-allergies"></i> Penicilina, Polvo</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Padecimientos Crónicos:</span>
+                        <span class="info-value"><i class="fas fa-check"></i> Ninguno</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Lentes:</span>
+                        <span class="info-value"><i class="fas fa-glasses"></i> Sí (Miopía)</span>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3><i class="fas fa-phone-alt"></i> Contacto de Emergencia</h3>
+                    <div class="info-row">
+                        <span class="info-label">Nombre:</span>
+                        <span class="info-value">María López (Madre)</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Teléfono:</span>
+                        <span class="info-value"><a href="tel:5551234567" style="text-decoration: none; color: inherit;">555-123-4567</a></span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Teléfono Alternativo:</span>
+                        <span class="info-value">555-987-6543</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="action-bar" style="justify-content: center; margin-top: 30px;">
+                <button class="form-action-btn" onclick="alert('Formulario de actualización habilitado.')">
+                    <i class="fas fa-edit"></i> Solicitar Actualización de Datos
+                </button>
+            </div>
+
+        </div>
+        <footer class="main-footer">
+            &copy; 2025 Sistema de Gestión Académica - Universidad Nacional de Río Cuarto.
+        </footer>
+    </div>
+    
+    <script src="student.js"></script>
+
+</body>
+</html>

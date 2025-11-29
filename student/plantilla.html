@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kardex Académico - Alumnos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="student.css">
+</head>
+<body>
+
+    <div class="page-container">
+
+        <header class="main-header-content">
+            <div class="header-top-bar">
+                <div class="logo-wrapper">
+                    <img src="logounrc.jpg" alt="Logo UNRC" class="logo-img">
+                </div>
+                <div class="system-title-container">
+                    <h1 class="system-title">A.L.M.A.</h1>
+                    <p class="system-subtitle-acronym">Administración Logística y Modular Academica </p>
+                </div>
+                <div class="profile-dropdown">
+                    <button class="profile-menu-toggle" id="profileToggle">
+                        <i class="fas fa-user-circle profile-icon-fa"></i>
+                        <span>Ana C. Pérez López</span>
+                        <i class="fas fa-caret-down" style="margin-left: 8px;"></i>
+                    </button>
+                    <div class="dropdown-content" id="profileDropdown">
+                        <a href="#"><i class="fas fa-id-badge"></i> Mi Perfil</a>
+                        <a href="#"><i class="fas fa-cog"></i> Configuración</a>
+                        <a href="../login/login.html" class="logout"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="horizontal-nav">
+                <a href="kardex.html" class="nav-item">Kardex Académico</a>
+                <a href="horario.html" class="nav-item">Horarios</a>
+                <a href="docs.html" class="nav-item">Trámites y Documentos</a>
+                <a href="inscrip.html" class="nav-item">Inscripciones</a>
+                <a href="medic.html" class="nav-item">Datos Médicos</a>
+            </nav>
+
+            <div class="theme-toggle-container-bottom">
+                <button class="theme-toggle-button" id="themeToggle" aria-label="Cambiar a Tema Oscuro">
+                    <i class="fas fa-sun"></i> 
+                </button>
+            </div>
+        </header>
+
+        <div class="main-content-area">
+    
+            <div class="content-header">
+                <h2>📚 Kardex Académico</h2>
+                <p class="subtitle">Visualiza tu historial de calificaciones y avance curricular en la carrera de Ciencias de Datos para Negocios.</p>
+            </div>
+
+            <div class="kardex-dashboard-grid">
+                
+                <div class="card profile-summary-card">
+                    <h3>Información y Métricas</h3>
+                    <div class="profile-meta">
+                        <p><strong>Nombre:</strong> Ana C. Pérez López</p>
+                        <p><strong>Matrícula:</strong> S9876</p>
+                        <p><strong>Carrera:</strong> Ciencias de Datos para Negocios</p>
+                        <p><strong>Grupo Actual:</strong> GPO-301</p>
+                        <p><strong>Promedio General:</strong> <span class="metric-value grade-chip grade-approved">8.63</span></p>
+                        <p><strong>Materias Aprobadas:</strong> <span class="metric-value status-approved">12 / 12</span></p>
+                    </div>
+                    <button class="btn btn-primary"><i class="fas fa-file-pdf"></i> Descargar Kardex PDF</button>
+                </div>
+
+                <div class="card credit-progress-card">
+                    <h3>Avance Curricular (3° Semestre)</h3>
+                    <div class="progress-chart-container">
+                        <div class="pie-chart" style="--progress: 66.67;">
+                            <span class="chart-value">66.67%</span>
+                        </div>
+                    </div>
+                    <div class="progress-stats">
+                        <p>Créditos Cursados: <strong>96</strong></p>
+                        <p>Créditos Totales (Estimado): <strong>144</strong></p>
+                        <p class="remaining">Créditos Faltantes: <strong>48</strong></p>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="card semester-performance-card">
+                <h3>Desempeño por Semestre</h3>
+                
+                <div class="semester-dashboard-grid">
+                    
+                    <div class="semester-card s1">
+                        <h4>1° Semestre</h4>
+                        <div class="grade-box grade-approved">
+                            <span class="grade-number">8.58</span>
+                            <span class="grade-label">Promedio Semestral</span>
+                        </div>
+                        <p class="semester-detail">Materias: 6 | Aprobadas: 6 | Reprobadas: 0</p>
+                        <ul class="grade-list">
+                            <li>Geometría Analítica: <span>9.2</span></li>
+                            <li>Matemáticas Discretas: <span>7.5</span></li>
+                            <li>Lógica de Programación: <span>8.8</span></li>
+                            <li>Ciencias de Datos (Intro): <span>9.5</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="semester-card s2">
+                        <h4>2° Semestre</h4>
+                        <div class="grade-box grade-approved">
+                            <span class="grade-number">8.67</span>
+                            <span class="grade-label">Promedio Semestral</span>
+                        </div>
+                        <p class="semester-detail">Materias: 6 | Aprobadas: 6 | Reprobadas: 0</p>
+                        <ul class="grade-list">
+                            <li>Álgebra Lineal: <span>9.0</span></li>
+                            <li>Programación (Avanzada): <span>8.5</span></li>
+                            <li>Desarrollo Personal: <span>9.8</span></li>
+                            <li>Cálculo Diferencial: <span>9.2</span></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="semester-card s3 in-progress">
+                        <h4>3° Semestre (En Curso)</h4>
+                        <div class="grade-box grade-in-progress">
+                            <span class="grade-number"><i class="fas fa-clock"></i></span>
+                            <span class="grade-label">Promedio Pendiente</span>
+                        </div>
+                        <p class="semester-detail">Materias: 6 | Estatus: 6 en curso</p>
+                        <ul class="grade-list">
+                            <li>Cálculo Integral</li>
+                            <li>Fundamentos de BD</li>
+                            <li>Estructura de BD</li>
+                            <li>Probabilidad</li>
+                        </ul>
+                    </div>
+
+                </div>
+                
+                <div class="table-legend">
+                    <p>Nota: Las calificaciones detalladas de cada semestre se pueden expandir o consultar en el sistema. Promedio General Calculado: 8.63.</p>
+                </div>
+            </div>
+
+        </div>
+        <footer class="main-footer">
+            &copy; 2025 Sistema de Gestión Académica - Universidad Nacional de Río Cuarto.
+        </footer>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="student.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensajes - Profesor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="teacher.css">
+</head>
+<body>
+
+    <div class="page-container">
+
+        <header class="main-header-content">
+            <div class="header-top-bar">
+                <div class="logo-wrapper">
+                    <img src="logounrc.jpg" alt="Logo UNRC" class="logo-img">
+                </div>
+                <div class="system-title-container">
+                    <h1 class="system-title">A.L.M.A.</h1>
+                    <p class="system-subtitle-acronym">Administración Logística y Modular Academica </p>
+                </div>
+                <div class="profile-dropdown">
+                    <button class="profile-menu-toggle" id="profileToggle">
+                        <i class="fas fa-user-circle profile-icon-fa"></i>
+                        <span>Profesor A.</span>
+                        <i class="fas fa-caret-down" style="margin-left: 8px;"></i>
+                    </button>
+                    <div class="dropdown-content" id="profileDropdown">
+                        <a href="#"><i class="fas fa-id-badge"></i> Mi Perfil</a>
+                        <a href="#"><i class="fas fa-cog"></i> Configuración</a>
+                        <a href="../login/login.html" class="logout"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="horizontal-nav">
+                <a href="myclass.html" class="nav-item">Mis Clases</a>
+                <a href="calif.html" class="nav-item">Captura de Calificaciones</a>
+                <a href="horario.html" class="nav-item">Horario</a>
+                <a href="mensajes.html" class="nav-item active">Mensajes</a>
+            </nav>
+
+            <div class="theme-toggle-container-bottom">
+                <button class="theme-toggle-button" id="themeToggle" aria-label="Cambiar a Tema Oscuro">
+                    <i class="fas fa-sun"></i> 
+                </button>
+            </div>
+        </header>
+
+        ---
+
+        <div class="main-content-area">
+
+            <h2 class="section-header-fancy">
+                <i class="header-icon fas fa-envelope"></i>
+                Bandeja de Mensajes
+            </h2>
+            <p class="subtitle-text">Consulta y responde a tus alumnos y colegas.</p>
+            
+            <div class="messaging-container">
+                
+                <div class="conversations-list-panel">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Buscar conversaciones..." class="search-input">
+                        <button class="new-chat-btn"><i class="fas fa-plus"></i></button>
+                    </div>
+
+                    <div class="conversation-card active" onclick="loadChat('ana')">
+                        <div class="avatar-sm">AC</div>
+                        <div class="info">
+                            <span class="name">Ana C. Pérez López</span>
+                            <span class="last-message">¿Podría revisar mi nota...?</span>
+                        </div>
+                        <span class="timestamp">10:30 AM</span>
+                    </div>
+
+                    <div class="conversation-card" onclick="loadChat('colega')">
+                        <div class="avatar-sm">CF</div>
+                        <div class="info">
+                            <span class="name">Colega, Mtro. Carlos F.</span>
+                            <span class="last-message">Reunión de coordinación el Jueves.</span>
+                        </div>
+                        <span class="timestamp">Ayer</span>
+                    </div>
+
+                    <div class="conversation-card unread" onclick="loadChat('valeria')">
+                        <div class="avatar-sm">VR</div>
+                        <div class="info">
+                            <span class="name">Valeria Ruiz</span>
+                            <span class="last-message">**[2 nuevos]** Sobre el ejercicio 5.</span>
+                        </div>
+                        <span class="timestamp">Martes</span>
+                    </div>
+                    
+                    <div class="conversation-card" onclick="loadChat('maria')">
+                        <div class="avatar-sm">ML</div>
+                        <div class="info">
+                            <span class="name">María López (GPO-103)</span>
+                            <span class="last-message">Gracias por la aclaración.</span>
+                        </div>
+                        <span class="timestamp">19/04</span>
+                    </div>
+                    
+                </div>
+                
+                <div class="chat-panel">
+                    
+                    <div class="chat-header" id="chatHeader">
+                        <div class="avatar-md">AC</div>
+                        <div class="chat-info">
+                            <span class="chat-name">Ana C. Pérez López</span>
+                            <span class="chat-status">Estudiante, GPO-103</span>
+                        </div>
+                        <button class="chat-options-btn"><i class="fas fa-ellipsis-v"></i></button>
+                    </div>
+
+                    <div class="messages-area" id="messagesArea">
+                        <div class="message received">
+                            <p>Buen día, profesor. Quería preguntarle sobre la nota final de ET. ¿Podría revisarla?</p>
+                            <span class="message-time">10:28 AM</span>
+                        </div>
+                        
+                        <div class="message sent">
+                            <p>Buen día, Ana. Claro, envíame tu matrícula para revisar. ¿Tienes alguna duda específica sobre el cálculo?</p>
+                            <span class="message-time">10:30 AM</span>
+                        </div>
+
+                        <div class="message received">
+                            <p>Mi matrícula es M1001. ¡Gracias!</p>
+                            <span class="message-time">10:32 AM</span>
+                        </div>
+                    </div>
+
+                    <div class="chat-input-area">
+                        <textarea placeholder="Escribe tu mensaje aquí..." rows="2"></textarea>
+                        <button class="send-btn primary-btn"><i class="fas fa-paper-plane"></i> Enviar</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        
+        ---
+
+        <footer class="main-footer">
+            &copy; 2025 Sistema de Gestión Académica - Universidad Nacional de Río Cuarto.
+        </footer>
+    </div>
+    
+    <script src="teacher.js"></script>
+
+</body>
+</html>

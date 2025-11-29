@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A.L.M.A - Mi Horario</title>
+    <link rel="stylesheet" href="teacher.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Definición de colores de clases en línea, para asegurar el coloreado */
+        .class-cell[data-class-id*="GANA"] { --class-color: var(--class-color-1); }
+        .class-cell[data-class-id*="ALIN"] { --class-color: var(--class-color-2); }
+        .class-cell[data-class-id*="CINT"] { --class-color: var(--class-color-3); }
+    </style>
+</head>
+<body>
+
+    <div class="page-container">
+    
+        <header class="main-header-content">
+            <div class="header-top-bar">
+                
+                <div class="logo-wrapper">
+                    <img src="logounrc.jpg" alt="Logo de la Universidad" class="logo-img">
+                </div>
+                
+                <div class="system-title-container">
+                    <h1 class="system-title">A.L.M.A.</h1>
+                    <span class="system-subtitle-acronym">Administración Logística y Modular Académica</span>
+                </div>
+
+                <div class="profile-dropdown">
+                    <button class="profile-menu-toggle" id="profileToggle">
+                        <i class="fas fa-user-circle profile-icon-fa"></i>
+                        <span>Profesor [Nombre]</span>
+                    </button>
+                    
+                    <div class="dropdown-content" id="profileDropdown">
+                        <a href="configuracion.html">Configuración</a>
+                        <a href="#">Ayuda</a>
+                        <a href="../login/login.html" class="logout">Cerrar Sesión</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="theme-toggle-container-bottom">
+                   <button id="themeToggle" class="theme-toggle-button" aria-label="Cambiar Tema">
+                     <i class="fas fa-sun"></i> 
+                </button>
+            </div>
+
+            <nav class="horizontal-nav">
+                <a href="myclass.html" class="nav-item" data-page="clases">Mis Clases</a>
+                <a href="calif.html" class="nav-item" data-page="calificaciones">Captura de Calificaciones</a>
+                <a href="horario.html" class="nav-item active" data-page="horarios">Horarios</a>
+                <a href="mensajes.html" class="nav-item" data-page="mensajes">Mensajes</a>
+            </nav>
+        </header>
+
+        <main class="main-content-area">
+            
+            <h2 class="section-header-fancy">
+                <i class="fas fa-clock header-icon"></i> 
+                Mi Horario Semanal            </h2>
+
+            <div class="schedule-table-container">
+                <table class="schedule-table" id="scheduleTable">
+                    <thead>
+                        <tr>
+                            <th class="time-header">Hora</th>
+                            <th>Lunes</th>
+                            <th>Martes</th>
+                            <th>Miércoles</th>
+                            <th>Jueves</th>
+                            <th>Viernes</th>
+                            <th>Sábado</th> 
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time-slot" rowspan="2">7:00 - 9:00</td>
+                            
+                            <td class="class-cell" rowspan="2" data-class-id="GANA-L1" data-full-name="Geometría Analítica" data-group="GPO-103" data-aula="Aula 201">
+                                <div class="class-title">G. Analítica</div>
+                                <div class="class-details">
+                                    <span class="chip chip-group">GPO-103</span>
+                                    <span class="chip chip-turn-matu">Matutino</span>
+                                    <span class="chip chip-aula">201</span>
+                                </div>
+                                <div class="info-pill">
+                                    <span class="pill-detail-label">Clase:</span><span class="pill-detail-value">Geometría Analítica</span>
+                                    <span class="pill-detail-label">Aula:</span><span class="pill-detail-value">201</span>
+                                </div>
+                            </td>
+                            
+                            <td class="class-cell empty" rowspan="2"></td>
+                            <td class="class-cell empty" rowspan="2"></td>
+                            <td class="class-cell empty" rowspan="2"></td>
+                            <td class="class-cell empty" rowspan="2"></td>
+                            <td class="class-cell empty" rowspan="2"></td>
+                        </tr>
+                        <tr></tr> <tr>
+                            <td class="time-slot" rowspan="2">9:00 - 11:00</td>
+                            
+                            <td class="class-cell empty" rowspan="2"></td>
+                            <td class="class-cell empty" rowspan="2"></td>
+                            <td class="class-cell empty" rowspan="2"></td>
+                            
+                            <td class="class-cell" rowspan="2" data-class-id="GANA-J2" data-full-name="Geometría Analítica" data-group="GPO-103" data-aula="Aula 201">
+                                <div class="class-title">G. Analítica</div>
+                                <div class="class-details">
+                                    <span class="chip chip-group">GPO-103</span>
+                                    <span class="chip chip-turn-matu">Matutino</span>
+                                    <span class="chip chip-aula">201</span>
+                                </div>
+                                <div class="info-pill">
+                                    <span class="pill-detail-label">Clase:</span><span class="pill-detail-value">Geometría Analítica</span>
+                                    <span class="pill-detail-label">Aula:</span><span class="pill-detail-value">201</span>
+                                </div>
+                            </td>
+                            
+                            <td class="class-cell empty" rowspan="2"></td>
+                            <td class="class-cell empty" rowspan="2"></td>
+                        </tr>
+                        <tr></tr> <tr>
+                            <td class="time-slot" rowspan="2">11:00 - 13:00</td>
+                            
+                            <td class="class-cell empty" rowspan="2"></td>
+                            
+                            <td class="class-cell" rowspan="2" data-class-id="ALIN-M3" data-full-name="Álgebra Lineal" data-group="GPO-201" data-aula="Aula 105">
+                                <div class="class-title">Á. Lineal</div>
+                                <div class="class-details">
+                                    <span class="chip chip-group">GPO-201</span>
+                                    <span class="chip chip-turn-interm">Intermedio</span>
+                                    <span class="chip chip-aula">105</span>
+                                </div>
+                                <div class="info-pill">
+                                    <span class="pill-detail-label">Clase:</span><span class="pill-detail-value">Álgebra Lineal</span>
+                                    <span class="pill-detail-label">Aula:</span><span class="pill-detail-value">105</span>
+                                </div>
+                            </td>
+                            
+                            <td class="class-cell empty" rowspan="2"></td>
+                            <td class="class-cell empty" rowspan="2"></td>
+                            <td class="class-cell empty" rowspan="2"></td>
+                            
+                            <td class="class-cell empty" rowspan="2"></td>
+                        </tr>
+                        <tr></tr> <tr>
+                            <td class="time-slot" rowspan="2">13:00 - 15:00</td>
+                            
+                            <td class="class-cell empty" rowspan="2"></td>
+                            <td class="class-cell empty" rowspan="2"></td>
+                            <td class="class-cell empty" rowspan="2"></td>
+                            <td class="class-cell empty" rowspan="2"></td>
+                            <td class="class-cell empty" rowspan="2"></td>
+                            
+                            <td class="class-cell" rowspan="2" data-class-id="ALIN-S4" data-full-name="Álgebra Lineal" data-group="GPO-201" data-aula="Lab 10 (Sáb)">
+                                <div class="class-title">Á. Lineal</div>
+                                <div class="class-details">
+                                    <span class="chip chip-group">GPO-201</span>
+                                    <span class="chip chip-turn-interm">Intermedio</span>
+                                    <span class="chip chip-aula">Lab 10</span>
+                                </div>
+                                <div class="info-pill">
+                                    <span class="pill-detail-label">Clase:</span><span class="pill-detail-value">Álgebra Lineal</span>
+                                    <span class="pill-detail-label">Aula:</span><span class="pill-detail-value">Laboratorio 10</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr></tr> <tr>
+                            <td class="time-slot" rowspan="2">15:00 - 17:00</td>
+                            
+                            <td class="class-cell empty" rowspan="2"></td>
+                            <td class="class-cell empty" rowspan="2"></td>
+                            
+                            <td class="class-cell" rowspan="2" data-class-id="CINT-Mi5" data-full-name="Cálculo Integral" data-group="GPO-301" data-aula="Aula 310">
+                                <div class="class-title">C. Integral</div>
+                                <div class="class-details">
+                                    <span class="chip chip-group">GPO-301</span>
+                                    <span class="chip chip-turn-vesp">Vespertino</span>
+                                    <span class="chip chip-aula">310</span>
+                                </div>
+                                <div class="info-pill">
+                                    <span class="pill-detail-label">Clase:</span><span class="pill-detail-value">Cálculo Integral</span>
+                                    <span class="pill-detail-label">Aula:</span><span class="pill-detail-value">310</span>
+                                </div>
+                            </td>
+                            
+                            <td class="class-cell empty" rowspan="2"></td>
+                            <td class="class-cell empty" rowspan="2"></td>
+                            <td class="class-cell empty" rowspan="2"></td>
+                        </tr>
+                        <tr></tr> <tr>
+                            <td class="time-slot" rowspan="2">17:00 - 19:00</td>
+                            
+                            <td class="class-cell empty" rowspan="2"></td>
+                            <td class="class-cell empty" rowspan="2"></td>
+                            <td class="class-cell empty" rowspan="2"></td>
+                            <td class="class-cell empty" rowspan="2"></td>
+                            
+                            <td class="class-cell" rowspan="2" data-class-id="CINT-V6" data-full-name="Cálculo Integral" data-group="GPO-301" data-aula="Aula 310">
+                                <div class="class-title">C. Integral</div>
+                                <div class="class-details">
+                                    <span class="chip chip-group">GPO-301</span>
+                                    <span class="chip chip-turn-vesp">Vespertino</span>
+                                    <span class="chip chip-aula">310</span>
+                                </div>
+                                <div class="info-pill">
+                                    <span class="pill-detail-label">Clase:</span><span class="pill-detail-value">Cálculo Integral</span>
+                                    <span class="pill-detail-label">Aula:</span><span class="pill-detail-value">310</span>
+                                </div>
+                            </td>
+                            
+                            <td class="class-cell empty" rowspan="2"></td>
+                        </tr>
+                        <tr></tr> </tbody>
+                </table>
+            </div>
+
+        </main>
+
+        <footer class="main-footer">
+            <p>&copy; 2025 Universidad Nacional Rosario Castellanos. Todos los derechos reservados.</p>
+        </footer>
+    </div> 
+
+    <script src="teacher.js"></script> 
+
+</body>
+</html>

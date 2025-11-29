@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kardex Académico - Alumnos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="student.css">
+</head>
+<body>
+    <div class="page-container">
+		<header class="main-header-content">
+			<div class="header-top-bar">
+				<div class="logo-wrapper">
+					<img src="logounrc.jpg" alt="Logo UNRC" class="logo-img">
+				</div>
+				<div class="system-title-container">
+					<h1 class="system-title">A.L.M.A.</h1>
+					<p class="system-subtitle-acronym">Administración Logística y Modular Academica </p>
+				</div>
+				<div class="profile-dropdown">
+					<button class="profile-menu-toggle" id="profileToggle">
+						<i class="fas fa-user-circle profile-icon-fa"></i>
+						<span>Ana C. Pérez López</span>
+						<i class="fas fa-caret-down" style="margin-left: 8px;"></i>
+					</button>
+					<div class="dropdown-content" id="profileDropdown">
+						<a href="#"><i class="fas fa-id-badge"></i> Mi Perfil</a>
+						<a href="#"><i class="fas fa-cog"></i> Configuración</a>
+						<a href="../login/login.html" class="logout"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+					</div>
+				</div>
+			</div>
+
+			<nav class="horizontal-nav">
+				<a href="kardex.html" class="nav-item">Kardex Académico</a>
+				<a href="horario.html" class="nav-item">Horarios</a>
+				<a href="docs.html" class="nav-item">Trámites y Documentos</a>
+				<a href="inscrip.html" class="nav-item">Inscripciones</a>
+				<a href="medic.html" class="nav-item">Datos Médicos</a>
+			</nav>
+
+			<div class="theme-toggle-container-bottom">
+				<button class="theme-toggle-button" id="themeToggle" aria-label="Cambiar a Tema Oscuro">
+					<i class="fas fa-sun"></i> 
+				</button>
+			</div>
+		</header>
+
+        <div class="main-content-area">
+            <div class="content-header">
+                <h2>📚 Kardex Académico</h2>
+                <p class="subtitle">Visualiza tu historial de calificaciones y avance curricular en la carrera de Ciencias de Datos para Negocios.</p>
+            </div>
+
+            <div class="kardex-dashboard-grid">
+                
+                <div class="card profile-summary-card">
+                    <h3><i class="fas fa-user"></i> Información del Estudiante</h3>
+                    <div class="profile-meta">
+                        <p><strong>Nombre:</strong> Estudiante A.</p>
+                        <p><strong>Carrera:</strong> Ciencias de Datos para Negocios</p>
+                        <p><strong>Grupo Actual:</strong> GPO-301</p>
+                        <p><strong>Semestre Actual:</strong> 3° Semestre</p>
+                    </div>
+                </div>
+
+                <div class="card stats-card">
+                    <h3><i class="fas fa-chart-bar"></i> Estadísticas Generales</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number" style="color: var(--color-aprobado);">8.72</div>
+                            <div class="stat-label">Promedio General</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" style="color: var(--main-color);">12</div>
+                            <div class="stat-label">Materias Aprobadas</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" style="color: var(--main-color);">6</div>
+                            <div class="stat-label">En Progreso</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card credit-progress-card">
+                    <h3><i class="fas fa-graduation-cap"></i> Progreso</h3>
+                    <div class="progress-chart-container">
+                        <div class="pie-chart" style="--progress: 37.5;">
+                            <span class="chart-value">37.5%</span>
+                        </div>
+                    </div>
+                    <div class="progress-stats">
+                        <p><strong>Completado:</strong> 3/8 Semestres</p>
+                        <p><strong>En Curso:</strong> 3° Semestre</p>
+                        <p><strong>Faltantes:</strong> 5 Semestres</p>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="card semester-performance-card">
+                <h3><i class="fas fa-book"></i> Desempeño Académico por Semestre</h3>
+                
+                <div class="semester-dashboard-grid">
+                    
+                    <!-- PRIMER SEMESTRE -->
+                    <div class="semester-card s1">
+                        <div class="semester-header">
+                            <h4>1° Semestre</h4>
+                            <span class="semester-badge">Completado</span>
+                        </div>
+                        <div class="grade-box grade-approved">
+                            <span class="grade-number">8.58</span>
+                            <span class="grade-label">Promedio</span>
+                        </div>
+                        <div class="semester-meta">
+                            <span><i class="fas fa-book-open"></i> 6 Materias</span>
+                            <span><i class="fas fa-check-circle"></i> 6 Aprobadas</span>
+                        </div>
+                        <ul class="grade-list">
+                            <li>
+                                <span class="subject-name">Geometría Analítica</span>
+                                <span class="subject-grade">9.0</span>
+                            </li>
+                            <li>
+                                <span class="subject-name">Matemáticas Discretas</span>
+                                <span class="subject-grade">8.2</span>
+                            </li>
+                            <li>
+                                <span class="subject-name">Lógica de Programación</span>
+                                <span class="subject-grade">8.8</span>
+                            </li>
+                            <li>
+                                <span class="subject-name">Ciencias de Datos</span>
+                                <span class="subject-grade">9.0</span>
+                            </li>
+                            <li>
+                                <span class="subject-name">Equidad de Género</span>
+                                <span class="subject-grade">8.5</span>
+                            </li>
+                            <li>
+                                <span class="subject-name">Administración Empresarial</span>
+                                <span class="subject-grade">7.8</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- SEGUNDO SEMESTRE -->
+                    <div class="semester-card s2">
+                        <div class="semester-header">
+                            <h4>2° Semestre</h4>
+                            <span class="semester-badge">Completado</span>
+                        </div>
+                        <div class="grade-box grade-approved">
+                            <span class="grade-number">8.85</span>
+                            <span class="grade-label">Promedio</span>
+                        </div>
+                        <div class="semester-meta">
+                            <span><i class="fas fa-book-open"></i> 6 Materias</span>
+                            <span><i class="fas fa-check-circle"></i> 6 Aprobadas</span>
+                        </div>
+                        <ul class="grade-list">
+                            <li>
+                                <span class="subject-name">Álgebra Lineal</span>
+                                <span class="subject-grade">9.0</span>
+                            </li>
+                            <li>
+                                <span class="subject-name">Programación</span>
+                                <span class="subject-grade">8.7</span>
+                            </li>
+                            <li>
+                                <span class="subject-name">Desarrollo Personal</span>
+                                <span class="subject-grade">9.2</span>
+                            </li>
+                            <li>
+                                <span class="subject-name">Redacción de Textos</span>
+                                <span class="subject-grade">8.9</span>
+                            </li>
+                            <li>
+                                <span class="subject-name">Cálculo Diferencial</span>
+                                <span class="subject-grade">8.8</span>
+                            </li>
+                            <li>
+                                <span class="subject-name">Estadística de Ciencias de Datos</span>
+                                <span class="subject-grade">8.6</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- TERCER SEMESTRE (EN CURSO) -->
+                    <div class="semester-card s3 in-progress">
+                        <div class="semester-header">
+                            <h4>3° Semestre</h4>
+                            <span class="semester-badge in-progress">En Curso</span>
+                        </div>
+                        <div class="grade-box grade-in-progress">
+                            <span class="grade-number"><i class="fas fa-hourglass-half"></i></span>
+                            <span class="grade-label">Pendiente</span>
+                        </div>
+                        <div class="semester-meta">
+                            <span><i class="fas fa-book-open"></i> 6 Materias</span>
+                            <span><i class="fas fa-spinner"></i> En Progreso</span>
+                        </div>
+                        <ul class="grade-list in-progress-list">
+                            <li>
+                                <span class="status-indicator"></span>
+                                <span class="subject-name">Cálculo Integral</span>
+                            </li>
+                            <li>
+                                <span class="status-indicator"></span>
+                                <span class="subject-name">Fundamentos de BD</span>
+                            </li>
+                            <li>
+                                <span class="status-indicator"></span>
+                                <span class="subject-name">Estructura de BD</span>
+                            </li>
+                            <li>
+                                <span class="status-indicator"></span>
+                                <span class="subject-name">Probabilidad</span>
+                            </li>
+                            <li>
+                                <span class="status-indicator"></span>
+                                <span class="subject-name">Contabilidad Financiera</span>
+                            </li>
+                            <li>
+                                <span class="status-indicator"></span>
+                                <span class="subject-name">Pensamiento para la Argumentación</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                
+                <div class="table-legend">
+                    <i class="fas fa-info-circle"></i> <strong>Nota:</strong> Los dos primeros semestres muestran la calificación final. El 3° semestre se encuentra actualmente en curso. Carrera de 8 semestres totales. Promedio General: 8.72
+                </div>
+            </div>        </div>
+        <footer class="main-footer">
+            &copy; 2025 Sistema de Gestión Académica - Universidad Nacional de Río Cuarto.
+        </footer>
+    </div>
+    
+    <script src="student.js"></script>
+</body>
+</html>

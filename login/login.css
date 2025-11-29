@@ -1,0 +1,140 @@
+/* ---------------------------------
+   1. ESTILOS GLOBALES Y FONDO
+   --------------------------------- */
+body {
+    font-family: 'Poppins', sans-serif; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    
+    /* --- FONDO DE PANTALLA --- */
+    background-image: url('./rosario6.jpg'); /* Con la ruta ajustada */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* ------------------------------------------------------------ */
+}
+
+/* ---------------------------------
+   2. TARJETA DE LOGIN (REDUCIDA, TRANSPARENTE y MOVIDA)
+   --------------------------------- */
+.login-card {
+    /* AJUSTE PARA MOVER LA TARJETA 75 PUNTOS A LA DERECHA */
+    /* Usamos 'calc' para mantenerla centrada y luego moverla */
+    margin-left: 475px; 
+    
+    /* HACER LA TARJETA TRANSPARENTE */
+    background-color: rgba(255, 255, 255, 0.6); /* Blanco con 60% de opacidad */
+    
+    padding: 30px; 
+    border-radius: 20px; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.08); /* Sombra un poco más marcada */
+    width: 280px; 
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.login-card:hover {
+    transform: translateY(-2px); 
+}
+
+/* ---------------------------------
+   3. TÍTULOS Y SUBTÍTULOS
+   --------------------------------- */
+.title {
+    margin-bottom: 3px;
+    color: #34495e; 
+    font-size: 1.8em; 
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #151c1d; 
+    font-size: 0.8em; 
+    font-weight: 400;
+}
+
+/* ---------------------------------
+   4. FORMULARIO E INPUTS
+   --------------------------------- */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #34495e;
+    font-size: 0.9em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e0e6ed;
+    border-radius: 10px;
+    background-color: #f7f9fb;
+    box-sizing: border-box; 
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #5d9cec;
+    box-shadow: 0 0 0 3px rgba(93, 156, 236, 0.2);
+    background-color: #ffffff;
+    outline: none;
+}
+
+/* ---------------------------------
+   5. BOTÓN (VINO TINTO Y REDONDEADO)
+   --------------------------------- */
+.login-button {
+    width: 100%;
+    padding: 10px;
+    /* Color Vino Tinto (Ej: #800000 o este tono más elegante) */
+    background-color: #900C3F; 
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.login-button:hover {
+    background-color: #C70039; /* Un tono más claro/vibrante al pasar el ratón */
+    transform: translateY(-1px);
+}
+
+/* ---------------------------------
+   6. MENSAJES (JS)
+   --------------------------------- */
+.hidden-message {
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 0.9em;
+    color: #e74c3c; 
+    visibility: hidden; 
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.show-message {
+    visibility: visible;
+    opacity: 1;
+}
+
+.success {
+    color: #2ecc71; 
+}

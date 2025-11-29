@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripciones - Alumnos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="student.css">
+</head>
+<body>
+
+    <div class="page-container">
+
+        <header class="main-header-content">
+            <div class="header-top-bar">
+                <div class="logo-wrapper">
+                    <img src="logounrc.jpg" alt="Logo UNRC" class="logo-img">
+                </div>
+                <div class="system-title-container">
+                    <h1 class="system-title">A.L.M.A.</h1>
+                    <p class="system-subtitle-acronym">Administración Logística y Modular Académica</p>
+                </div>
+                <div class="profile-dropdown">
+                    <button class="profile-menu-toggle" id="profileToggle">
+                        <i class="fas fa-user-circle profile-icon-fa"></i>
+                        <span>Ana C. Pérez López</span>
+                        <i class="fas fa-caret-down" style="margin-left: 8px;"></i>
+                    </button>
+                    <div class="dropdown-content" id="profileDropdown">
+                        <a href="#"><i class="fas fa-id-badge"></i> Mi Perfil</a>
+                        <a href="#"><i class="fas fa-cog"></i> Configuración</a>
+                        <a href="../login/login.html" class="logout"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="horizontal-nav">
+                <a href="kardex.html" class="nav-item">Kardex Académico</a>
+                <a href="horario.html" class="nav-item">Horarios</a>
+                <a href="docs.html" class="nav-item">Trámites y Documentos</a>
+                <a href="inscrip.html" class="nav-item active">Inscripciones</a>
+                <a href="medic.html" class="nav-item">Datos Médicos</a>
+            </nav>
+
+            <div class="theme-toggle-container-bottom">
+                <button class="theme-toggle-button" id="themeToggle" aria-label="Cambiar a Tema Oscuro">
+                    <i class="fas fa-sun"></i> 
+                </button>
+            </div>
+        </header>
+
+        <div class="main-content-area">
+    
+            <div class="content-header">
+                <h2>Inscripción de Materias</h2>
+                <p class="subtitle">Selecciona las materias para el próximo ciclo escolar 2025-2.</p>
+            </div>
+
+            <div class="alert-box alert-info">
+                <i class="fas fa-info-circle"></i>
+                <div>
+                    <strong>Periodo de Inscripción Abierto:</strong> Tienes hasta el 15 de Diciembre para completar tu carga académica.
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Materias Disponibles</h3>
+                <p>Basado en tu avance curricular, estas son las materias sugeridas para el 4º Semestre.</p>
+                
+                <div class="data-table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Clave</th>
+                                <th>Materia</th>
+                                <th>Créditos</th>
+                                <th>Horario</th>
+                                <th>Profesor</th>
+                                <th>Seleccionar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>EST-401</td>
+                                <td>Estadística Inferencial</td>
+                                <td>8</td>
+                                <td>Lun/Mie 09:00 - 11:00</td>
+                                <td>Dr. Roberto Gómez</td>
+                                <td><input type="checkbox" checked></td>
+                            </tr>
+                            <tr>
+                                <td>PROG-402</td>
+                                <td>Programación Avanzada</td>
+                                <td>10</td>
+                                <td>Mar/Jue 11:00 - 13:00</td>
+                                <td>Mtra. Laura Sánchez</td>
+                                <td><input type="checkbox" checked></td>
+                            </tr>
+                            <tr>
+                                <td>BD-403</td>
+                                <td>Bases de Datos II</td>
+                                <td>8</td>
+                                <td>Lun/Mie 11:00 - 13:00</td>
+                                <td>Ing. Carlos Ruiz</td>
+                                <td><input type="checkbox" checked></td>
+                            </tr>
+                            <tr>
+                                <td>ING-404</td>
+                                <td>Ingeniería de Software</td>
+                                <td>8</td>
+                                <td>Mar/Jue 09:00 - 11:00</td>
+                                <td>Dra. Elena Torres</td>
+                                <td><input type="checkbox" checked></td>
+                            </tr>
+                            <tr>
+                                <td>HUM-405</td>
+                                <td>Ética Profesional</td>
+                                <td>6</td>
+                                <td>Vie 10:00 - 12:00</td>
+                                <td>Lic. Mario Díaz</td>
+                                <td><input type="checkbox" checked></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="action-bar">
+                <div class="summary-text">
+                    Total de Créditos Seleccionados: <span style="color: var(--main-color);">40</span>
+                </div>
+                <button class="form-action-btn" onclick="alert('Inscripción confirmada exitosamente. Se ha generado tu comprobante.')">
+                    <i class="fas fa-check-circle"></i> Confirmar Inscripción
+                </button>
+            </div>
+
+        </div>
+        <footer class="main-footer">
+            &copy; 2025 Sistema de Gestión Académica - Universidad Nacional de Río Cuarto.
+        </footer>
+    </div>
+    
+    <script src="student.js"></script>
+
+</body>
+</html>
